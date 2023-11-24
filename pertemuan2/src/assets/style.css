@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+    background-color: rgb(225, 225, 225);
+}
+.box {
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+    flex-direction: column;
+}
+.header {
+    width: 180vh;
+    height: 90px;
+}
+.header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+.box, .home_button, .about_button, .restricted_button, 
+.login_button, .logout_button, .a_login_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home_about_button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.home_button, .about_button, .restricted_button {
+    background-color: darkgray;
+}
+.login_button {
+    background-color: darkgreen;
+}
+.logout_button {
+    background-color: darkred;
+}
+.home_button, .about_button, .restricted_button, .login_button, .logout_button {
+    width: 200px;
+    height: 40px;
+    margin-left: 5px;
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+.home_button:hover, .about_button:hover, .restricted_button:hover {
+    width: 201px;
+    height: 42px;
+    background-color: rgb(119, 113, 113);
+}

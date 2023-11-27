@@ -10,26 +10,20 @@ const password = ref('')
 
 const router = useRouter() 
 
-const onLogin = async ()=> {
-    // Send a POST request
-    const response = await axios({
-    method: 'post',
-    url: 'http:/localhost:3000/login',
-    data: {
-        username: username.value,
-        password: password.value,
-    }
-    // data: {
-    //     firstName: 'Fred',
-    //     lastName: 'Flintstone'
-    // }
-    });
-
-    console.log(response)
-    // auth.login(username.value)
-
-    // router.push('/')
+const onLogin = async () => {
+  try {
+    const response = await axios.post('http://localhost:3000/login', {
+      username: username.value,
+      password: password.value,
+    })
+    
+    auth.login(username.value)
+    console.log(response);
+  } catch (error) {
+    console.error('Login error:', error);
+  }
 }
+console.log(Response)
 </script>
 <template>
     <h1>Login Page</h1>
